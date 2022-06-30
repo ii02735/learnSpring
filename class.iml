@@ -1,0 +1,6 @@
+@startuml
+class class {
+  - String attribute
+  + void method()
+}
+@enduml
