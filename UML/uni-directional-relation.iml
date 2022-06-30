@@ -4,5 +4,5 @@ class Book {
   - String title
   + void borrow()
 }
-Author - Book : book
+Book -> Author
 @enduml
