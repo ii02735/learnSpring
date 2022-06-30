@@ -1,0 +1,8 @@
+@startuml
+class Author
+class Book {
+  - String title
+  + void borrow()
+}
+Author -- Book
+@enduml
