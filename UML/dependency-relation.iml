@@ -1,0 +1,7 @@
+@startuml
+class Author {
+    + void setBook(Book book)
+}
+class Book
+Author ..> Book
+@enduml
