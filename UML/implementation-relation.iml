@@ -1,0 +1,7 @@
+@startuml
+class PDF
+class Picture
+interface Printable
+PDF ..|> Printable
+Picture ..|> Printable
+@enduml

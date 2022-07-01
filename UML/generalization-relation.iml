@@ -1,0 +1,5 @@
+@startuml
+class Magazine
+class Book
+Magazine -|> Book
+@enduml

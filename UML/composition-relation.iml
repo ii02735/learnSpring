@@ -1,0 +1,9 @@
+@startuml
+class Human
+class Hand
+class Leg
+class Head
+Human *--"2" Hand
+Human *--"2" Leg
+Human *--"1" Head
+@enduml
