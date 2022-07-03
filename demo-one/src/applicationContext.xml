@@ -18,6 +18,6 @@
     </bean>
 
     <!-- Define your beans here -->
-    <bean id="baseballCoach" class="com.ii02735.springdemo.BaseballCoach"></bean>
+    <bean id="baseballCoach" class="com.ii02735.springdemo.SpecialBaseballCoach"></bean>
     <bean id="trackCoach" class="com.ii02735.springdemo.TrackCoach"></bean>
 </beans>
