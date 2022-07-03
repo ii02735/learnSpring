@@ -1,0 +1,10 @@
+@startuml
+class Application
+class BaseballCoach
+class TrackCoach
+interface Coach
+Application ...> Coach
+BaseballCoach ..|> Coach
+SpecialBaseballCoach ..|> Coach
+TrackCoach ..|> Coach
+@enduml
