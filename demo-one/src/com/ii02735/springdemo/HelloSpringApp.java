@@ -9,7 +9,7 @@ public class HelloSpringApp {
 		// Chargement du fichier de configuration de spring
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		// Récupération du bean depuis le container
-		Coach coach = context.getBean("baseballCoach", Coach.class);
+		Coach coach = context.getBean("coach", Coach.class);
 		// Appeler les méthodes du bean
 		System.out.println(coach.getDailyWorkout());
 		// Invocation de la méthode qui appelle notre dépendance
