@@ -18,6 +18,13 @@
     </bean>
 
     <!-- Define your beans here -->
-    <bean id="baseballCoach" class="com.ii02735.springdemo.SpecialBaseballCoach"></bean>
+    
+    <!-- Define the dependency -->
+    <bean id="myFortune" class="com.ii02735.springdemo.HappyFortuneService"></bean>
+    
+    <bean id="baseballCoach" class="com.ii02735.springdemo.SpecialBaseballCoach">
+    	<!-- constructor injection -->
+    	<constructor-arg ref="myFortune" />   		
+    </bean>
     <bean id="trackCoach" class="com.ii02735.springdemo.TrackCoach"></bean>
 </beans>
