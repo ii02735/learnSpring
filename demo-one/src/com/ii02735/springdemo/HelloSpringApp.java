@@ -12,6 +12,8 @@ public class HelloSpringApp {
 		Coach coach = context.getBean("baseballCoach", Coach.class);
 		// Appeler les méthodes du bean
 		System.out.println(coach.getDailyWorkout());
+		// Invocation de la méthode qui appelle notre dépendance
+		System.out.println(coach.getDailyFortune());
 		// Fermer le contexte d'application
 		context.close();
 	}

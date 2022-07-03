@@ -2,6 +2,12 @@ package com.ii02735.springdemo;
 
 public class SpecialBaseballCoach implements Coach {
 
+	private FortuneService fortuneService;
+	
+	public SpecialBaseballCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		// TODO Auto-generated method stub
@@ -10,8 +16,7 @@ public class SpecialBaseballCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.fortuneService.getFortune();
 	}
 
 }
