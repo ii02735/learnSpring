@@ -8,4 +8,10 @@ public class SpecialBaseballCoach implements Coach {
 		return "Spend 2 hours on batting practice";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -14,4 +14,6 @@ package com.ii02735.springdemo;
 public interface Coach {
     
 	public String getDailyWorkout();
+	// Va déléguer le traitement à la classe de service
+	public String getDailyFortune();
 }

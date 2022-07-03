@@ -1,0 +1,22 @@
+@startuml
+class Application
+class BaseballCoach
+class TrackCoach
+interface Coach {
+   + String getDailyWorkout()
+   + String getDailyFortune()
+}
+interface FortuneService {
+
+}
+class HappyFortuneService
+HappyFortuneService ..|> FortuneService
+Application ...> Coach
+BaseballCoach ..|> Coach
+SpecialBaseballCoach ..|> Coach
+TrackCoach ..|> Coach
+
+BaseballCoach -> FortuneService
+SpecialBaseballCoach -> FortuneService
+TrackCoach -> FortuneService
+@enduml
