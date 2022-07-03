@@ -1,0 +1,9 @@
+@startuml
+class Application
+class BaseballCoach {
+
+   + void getDailyWorkout()
+}
+
+Application --> BaseballCoach
+@enduml
