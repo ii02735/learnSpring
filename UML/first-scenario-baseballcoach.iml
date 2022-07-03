@@ -2,8 +2,8 @@
 class Application
 class BaseballCoach {
 
-   + void getDailyWorkout()
+   + String getDailyWorkout()
 }
 
-Application --> BaseballCoach
+Application ..> BaseballCoach
 @enduml
