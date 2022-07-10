@@ -1,0 +1,13 @@
+@startuml
+class CricketCoach {
+	- String email
+	- String team
+}
+interface Coach {
+    + String getDailyWorkout()
+    + String getDailyFortune()
+}
+
+CricketCoach --|> Coach
+Application ..> Coach
+@enduml

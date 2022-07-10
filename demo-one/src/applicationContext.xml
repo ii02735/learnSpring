@@ -16,7 +16,9 @@
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
-
+	
+	<!--  load a file property for customCricketCoach bean -->
+	<context:property-placeholder location="classpath:file.properties"/>
     <!-- Define your beans here -->
     
     <!-- Define the dependency -->
@@ -29,5 +31,19 @@
     
     <bean id="cricketCoach" class="com.ii02735.springdemo.CricketCoach">
     	<property name="fortuneService" ref="myFortune"></property>
+    	<property name="email" value="thebestcoach@mail.com" />
+        <property name="team" value="Sunrisers Hyderabad" />
+    </bean>
+    
+    <bean id="headCricketCoach" class="com.ii02735.springdemo.CricketCoach">
+    	<property name="fortuneService" ref="myFortune"></property>
+    	<property name="email" value="theboss@mail.com" />
+        <property name="team" value="The bests" />
+    </bean>
+    
+    <bean id="customCricketCoach" class="com.ii02735.springdemo.CricketCoach">
+    	<property name="fortuneService" ref="myFortune"/>
+    	<property name="email" value="${customCricket.email}"/>
+    	<property name="team" value="${customCricket.team}"/>
     </bean>
 </beans>
