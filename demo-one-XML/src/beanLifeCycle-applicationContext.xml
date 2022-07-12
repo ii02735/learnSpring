@@ -20,5 +20,5 @@
     
     <!-- Define the dependency -->
     <bean id="myFortune" class="com.ii02735.springdemo.HappyFortuneService"/>
-    <bean id="coach" class="com.ii02735.springdemo.TrackCoach"/>
+    <bean id="coach" class="com.ii02735.springdemo.TrackCoach" init-method="myStartupStuff" destroy-method="myCleanupStuff"/>
 </beans>

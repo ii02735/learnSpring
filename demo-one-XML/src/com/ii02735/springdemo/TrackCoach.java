@@ -28,5 +28,15 @@ public class TrackCoach implements Coach {
 		 */
 		return "Just Do it "+this.fortuneService.getFortune();
 	}
+	
+	// Lifecycle custom methods
+	
+	private void myStartupStuff() {
+		System.out.println("Bean of TrackCoach class intialized");
+	}
+	
+	private void myCleanupStuff() {
+		System.out.println("Bean of TrackCoach class destroyed");
+	}
 
 }
