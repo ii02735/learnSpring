@@ -1,0 +1,19 @@
+@startuml
+state BeanLifecycle as "Cycle de vie d'une bean Spring" {
+state "Démarrage du container" as ContainerStarted
+state "Injection de dépendances" as DependenciesInjected
+state "Traitement interne de Spring" as SpringInternalProcessing
+state "Méthode d'initialisation personnalisée" as CustomInitMethod #f59842
+state "Méthode de destruction personnalisée" as CustomDestroyMethod #f59842
+state "Manipulation de la bean" as BeanManipulation
+[*] --> ContainerStarted
+ContainerStarted --> DependenciesInjected
+DependenciesInjected --> SpringInternalProcessing
+SpringInternalProcessing -> CustomInitMethod
+note right of CustomInitMethod : La bean est prête à être utilisée
+CustomInitMethod --> BeanManipulation
+BeanManipulation --> CustomDestroyMethod
+CustomDestroyMethod ---> [*]
+note right of CustomDestroyMethod : La bean est détruite
+}
+@enduml
