@@ -22,8 +22,8 @@
     <!-- Define your beans here -->
     
     <!-- Define the dependency -->
-    <bean id="myFortune" class="com.ii02735.springdemo.HappyFortuneService"></bean>
-    
+    <bean id="myFortune" class="com.ii02735.springdemo.HappyFortuneService"/>
+    <bean id="randomFortune" class="com.ii02735.springdemo.RandomFortuneService"/>
     <bean id="coach" class="com.ii02735.springdemo.TrackCoach">
     	<!-- constructor injection -->
     	<constructor-arg ref="myFortune" />   		
@@ -45,5 +45,9 @@
     	<property name="fortuneService" ref="myFortune"/>
     	<property name="email" value="${customCricket.email}"/>
     	<property name="team" value="${customCricket.team}"/>
+    </bean>
+    
+    <bean id="randomFortuneCoach" class="com.ii02735.springdemo.TrackCoach">
+    	<constructor-arg ref="randomFortune"/>
     </bean>
 </beans>

@@ -36,6 +36,10 @@ public class HelloSpringApp {
 		CricketCoach customCricketCoach = context.getBean("customCricketCoach",CricketCoach.class);
 		System.out.println(customCricketCoach.getEmail());
 		System.out.println(customCricketCoach.getTeam());
+		
+		// Test avec une bean proposant un message de fortune aléatoire
+		Coach randomFortuneCoach = context.getBean("randomFortuneCoach",Coach.class);
+		System.out.println(randomFortuneCoach.getDailyFortune());
 		context.close();
 	}
 	
