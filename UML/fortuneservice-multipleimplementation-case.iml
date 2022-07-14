@@ -1,0 +1,6 @@
+@startuml
+interface FortuneService
+HappyFortuneService --|> FortuneService
+RandomFortuneService --|> FortuneService
+DatabaseFortuneService --|> FortuneService
+@enduml
