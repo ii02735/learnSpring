@@ -1,5 +1,6 @@
 package com.ii02735.springdemoannotations;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +13,7 @@ public class BasketCoach implements Coach {
 	 * est devenu facultatif dans le cadre d'injection
 	 * par constructeur
 	 */
-	public BasketCoach(FortuneService fortuneService) {
+	public BasketCoach(@Qualifier("happyFortuneService")FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 	

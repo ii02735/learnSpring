@@ -1,6 +1,7 @@
 package com.ii02735.springdemoannotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,7 +15,7 @@ public class TennisCoach implements Coach {
 	 * c'est la première classe qu'il a rencontré dans son analyse
 	 */
 	@Autowired
-	public TennisCoach(FortuneService fortuneService) {
+	public TennisCoach(@Qualifier("randomFortuneService")FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 	
