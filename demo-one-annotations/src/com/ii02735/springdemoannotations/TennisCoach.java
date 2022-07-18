@@ -1,5 +1,8 @@
 package com.ii02735.springdemoannotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -17,6 +20,18 @@ public class TennisCoach implements Coach {
 	@Autowired
 	public TennisCoach(@Qualifier("randomFortuneService")FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
+	}
+	
+	@PostConstruct
+	private void initializeTennisCoach()
+	{
+		System.out.println("Tennis coach has been initialized");
+	}
+	
+	@PreDestroy
+	private void destroyTennisCoach()
+	{
+		System.out.println("Tennis coach has been destroyed");
 	}
 	
 	@Override

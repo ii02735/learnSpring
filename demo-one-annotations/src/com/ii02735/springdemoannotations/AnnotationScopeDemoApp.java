@@ -7,17 +7,12 @@ public class AnnotationScopeDemoApp {
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		Coach coach = context.getBean("tennisCoach",Coach.class);
-		System.out.println(coach.getDailyWorkout());
-		System.out.println("tennisCoach : " + coach.getDailyFortune());
+		// Cas avec le singleton
+		Coach coach1 = context.getBean("tennisCoach",Coach.class);
+		Coach coach2 = context.getBean("tennisCoach",Coach.class);
 		
-		coach = context.getBean("basketCoach",Coach.class);
-		System.out.println(coach.getDailyWorkout());
-		System.out.println("basketCoach : " + coach.getDailyFortune());
+		System.out.println(coach1 == coach2);
 		
-		coach = context.getBean("cricketCoach",Coach.class);
-		System.out.println(coach.getDailyWorkout());
-		System.out.println("CricketCoach : " + coach.getDailyFortune());
 		
 		
 		context.close();
