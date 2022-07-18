@@ -7,9 +7,9 @@ public class JavaDemoApp {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportContainerConfig.class);
 		
-		Coach coach1 = context.getBean("tennisCoach",Coach.class);
-		Coach coach2 = context.getBean("tennisCoach",Coach.class);
-		System.out.println(coach1 == coach2);
+		SwimCoach coach1 = context.getBean("swimCoach",SwimCoach.class); // utilisation d'une classe concrète pour invoquer l'accesseur
+		System.out.println(coach1.getDailyWorkout());
+		System.out.println(coach1.getTeamIdentifier());
 		
 		context.close();
 	}
