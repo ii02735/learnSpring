@@ -12,9 +12,9 @@
 	- For more detailed logs, set values to "FINEST"
 	- For info on logging levels, see: http://www.vogella.com/tutorials/Logging/article.html
  -->
-    <bean id="myLoggerConfig" class="com.ii02735.springdemoannotations.MyLoggerConfig" init-method="initLogger">
-    	<property name="rootLoggerLevel" value="FINE" />
-    	<property name="printedLoggerLevel" value="FINE"/>
+    <bean id="myLoggerConfig" class="com.ii02735.springdemoannotations.MyLoggerConfig">
+    	<constructor-arg index="0" value="FINE" />
+    	<constructor-arg index="1" value="FINE"/>
     </bean>
 	
 	<!-- 
