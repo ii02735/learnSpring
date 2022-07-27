@@ -19,7 +19,7 @@
    <mvc:annotation-driven/>
 
    <!-- 3. Activer la résolution de vues -->
-   <bean class="org.springframework.web.servlet.view.InternalResourceResolver">
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
       <!-- On précise l'endroit où aller chercher les fichiers de vue -->
       <property name="prefix" value="/WEB-INF/view/" />
       <!-- On précise l'extension des fichiers à ajouter -->
