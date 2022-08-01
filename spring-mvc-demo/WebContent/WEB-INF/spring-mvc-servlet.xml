@@ -25,4 +25,8 @@
       <!-- On précise l'extension des fichiers à ajouter -->
       <property name="suffix" value=".jsp" />
    </bean>
+   
+   <!--  4. Activer la récupération des assets (CSS, JS, img) -->
+   
+   <mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>
 </beans>
