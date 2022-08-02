@@ -1,3 +1,4 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -9,5 +10,9 @@
 		<p>Titre : <strong>${book.title}</strong>
 		<p>Auteur : <strong>${book.author}</strong>
 		<p>Genre : <strong>${book.genre}</strong>
+		<h3>Caractéristiques du livre</h3>
+		<c:forEach var="spec" items="${book.specifications}">
+			<li>${spec}</li>
+		</c:forEach>
 	</body>
 </html>

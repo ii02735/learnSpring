@@ -14,10 +14,15 @@
 			<form:label path="title">Titre :</form:label>
 			<form:input path="title" type="text"/>
 			<br/>
-			<form:select path="genre">
-				<span>Sélectionner le genre</span>
-				<form:options items="${book.genres}"/>
-			</form:select>
+			<span>Sélectionner le genre : <br/</span>
+			<form:radiobuttons path="genre" items="${book.genres}"/>
+			<br/>
+			<br/>
+			<span>Ajouter des caractéristiques (si existant):</span>
+			<br/>
+			<form:checkboxes items="${book.availableSpecifications}" path="specifications"/>
+			<br/>
+			<br/>
 			<input type="submit" value="emprunter"/>
 		</form:form>
 	</body>
