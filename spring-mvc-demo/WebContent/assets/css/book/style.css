@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body {
+	font-family: "Calibri", "monospace", sans-serif;
+}
+
+form input {
+	padding: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
