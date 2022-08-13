@@ -2,14 +2,15 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Emprunter un livre</title>
+		<title>Créer un livre</title>
 		<meta charset="utf-8">
 	</head>
 	<body>
-		<h2>Résultat de la soumission :</h2>
+		<h2>Résultat de la création :</h2>
 		<p>Titre : <strong>${book.title}</strong>
 		<p>Auteur : <strong>${book.author}</strong>
 		<p>Genre : <strong>${book.genre}</strong>
+		<p>Nombre de pages : <strong>${book.pagesNumber}</strong></p>
 		<c:choose>
 			<c:when test="${empty book.specifications}">
 				<h3>Aucune caractéristique précisée</h3>
