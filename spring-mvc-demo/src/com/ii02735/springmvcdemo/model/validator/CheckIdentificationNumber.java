@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 
+import com.ii02735.springmvcdemo.model.IdentificationType;
+
 @Constraint(validatedBy = IdentificationNumberConstraintValidator.class)
 @Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
@@ -14,6 +16,10 @@ public @interface CheckIdentificationNumber {
 	
 	// Message de validation par défaut
 	public String message() default "Le numéro d'identification du livre n'est pas correct";
+	
+	
+	public IdentificationType idPrefix() default IdentificationType.ISBN;
+	
 	// OBLIGATOIRE À PARTIR DE HIBERNATE VALIDATOR 4.2
     Class<?>[] groups() default {};
     Class<?>[] payload() default {};

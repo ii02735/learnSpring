@@ -28,7 +28,7 @@ public class Book {
 	private Integer pagesNumber;
 	
 	@NotNull(message = "Le numéro d'identification du livre est obligatoire")
-	@CheckIdentificationNumber
+	@CheckIdentificationNumber(idPrefix = IdentificationType.ISBN)
 	private String identificationNumber;
 
 	private String[] specifications;

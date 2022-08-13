@@ -24,7 +24,7 @@
 			<form:input type="text" path="pagesNumber"/>
 			<form:errors path="pagesNumber" cssClass="error"/>
 			<br/>
-			<form:label path="identificationNumber">Numéro d'identification du livre (ISBN ou EAN) :</form:label>
+			<form:label path="identificationNumber">Numéro d'identification du livre (ISBN) :</form:label>
 			<form:input type="text" path="identificationNumber"/>
 			<form:errors path="identificationNumber" cssClass="error"/>
 			<br/>
