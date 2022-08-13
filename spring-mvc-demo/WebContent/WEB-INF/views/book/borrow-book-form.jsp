@@ -11,11 +11,14 @@
 			<form:label path="author">Auteur :</form:label>
 			<form:input path="author" type="text"/>
 			<br/>
+			<form:errors path="author" cssClass="error"/>
 			<form:label path="title">Titre :</form:label>
 			<form:input path="title" type="text"/>
 			<br/>
-			<span>Sélectionner le genre : <br/</span>
+			<form:errors path="title" cssClass="error"/>
+			<span>Sélectionner le genre : <br/></span>
 			<form:radiobuttons path="genre" items="${book.genres}"/>
+			<form:errors path="genre" cssClass="error"/>
 			<br/>
 			<br/>
 			<span>Ajouter des caractéristiques (si existant):</span>
