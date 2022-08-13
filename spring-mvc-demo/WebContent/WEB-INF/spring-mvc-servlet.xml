@@ -26,6 +26,10 @@
       <property name="suffix" value=".jsp" />
    </bean>
    
+   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+   	  <property name="basenames" value="resources/customExceptionMessages/messages"/>
+   </bean>
+   
    <!--  4. Activer la récupération des assets (CSS, JS, img) -->
    
    <mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>

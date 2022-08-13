@@ -19,11 +19,11 @@ import javax.validation.Valid;
 @RequestMapping("/book")
 public class BookController {
 	
-	@GetMapping("/borrow")
-	public String borrowBook(Model model)
+	@GetMapping("/create")
+	public String createBook(Model model)
 	{
 		model.addAttribute("book", new Book());
-		return "book/borrow-book-form";
+		return "book/create-book-form";
 	}
 	
 	@InitBinder
@@ -34,11 +34,12 @@ public class BookController {
 		binder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 	
-	@PostMapping("/borrow")
-	public String borrowBook(@Valid @ModelAttribute("book") Book book, BindingResult result)
+	@PostMapping("/create")
+	public String createBook(@Valid @ModelAttribute("book") Book book, BindingResult result)
 	{
 		System.out.println(result.hasErrors());
-		if(result.hasErrors()) return "book/borrow-book-form";
-		return "book/borrow-book-submit";
+		System.out.println(book);
+		if(result.hasErrors()) return "book/create-book-form";
+		return "book/create-book-submit";
 	}
 }
