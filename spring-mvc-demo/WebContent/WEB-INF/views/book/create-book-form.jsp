@@ -24,6 +24,10 @@
 			<form:input type="text" path="pagesNumber"/>
 			<form:errors path="pagesNumber" cssClass="error"/>
 			<br/>
+			<form:label path="identificationNumber">Numéro d'identification du livre (ISBN ou EAN) :</form:label>
+			<form:input type="text" path="identificationNumber"/>
+			<form:errors path="identificationNumber" cssClass="error"/>
+			<br/>
 			<span>Ajouter des caractéristiques (si existant):</span>
 			<br/>
 			<form:checkboxes items="${book.availableSpecifications}" path="specifications"/>

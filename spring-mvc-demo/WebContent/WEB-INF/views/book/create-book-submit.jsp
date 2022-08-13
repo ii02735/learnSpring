@@ -11,6 +11,7 @@
 		<p>Auteur : <strong>${book.author}</strong>
 		<p>Genre : <strong>${book.genre}</strong>
 		<p>Nombre de pages : <strong>${book.pagesNumber}</strong></p>
+		<p>Numéro d'identification : <strong>${book.identificationNumber}</strong></p>
 		<c:choose>
 			<c:when test="${empty book.specifications}">
 				<h3>Aucune caractéristique précisée</h3>

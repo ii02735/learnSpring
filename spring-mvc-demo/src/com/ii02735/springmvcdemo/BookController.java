@@ -39,7 +39,10 @@ public class BookController {
 	{
 		System.out.println(result.hasErrors());
 		System.out.println(book);
-		if(result.hasErrors()) return "book/create-book-form";
+		if(result.hasErrors()) {
+			System.out.println(result);
+			return "book/create-book-form";
+		}
 		return "book/create-book-submit";
 	}
 }

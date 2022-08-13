@@ -8,6 +8,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.ii02735.springmvcdemo.model.validator.CheckIdentificationNumber;
+
 public class Book {
 
 	@NotNull(message = "L'identité de l''auteur est obligatoire")
@@ -24,6 +26,10 @@ public class Book {
 	@NotNull(message = "Le nombre de pages du livre est obligatoire")
 	@Min(value = 3, message = "Le nombre de pages du livre ne peut pas être inférieur à 3")
 	private Integer pagesNumber;
+	
+	@NotNull(message = "Le numéro d'identification du livre est obligatoire")
+	@CheckIdentificationNumber
+	private String identificationNumber;
 
 	private String[] specifications;
 
@@ -73,6 +79,14 @@ public class Book {
 
 	public Map<String, String> getAvailableSpecifications() {
 		return Map.of("Plus de 100 pages", "+100 pages", "Recyclable", "Recyclable", "Échangeable", "Échangeable");
+	}
+	
+	public void setIdentificationNumber(String identificationNumber) {
+		this.identificationNumber = identificationNumber;
+	}
+	
+	public String getIdentificationNumber() {
+		return this.identificationNumber;
 	}
 	
 	@Override
