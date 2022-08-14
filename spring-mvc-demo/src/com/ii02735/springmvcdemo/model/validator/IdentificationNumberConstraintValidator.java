@@ -19,11 +19,13 @@ public class IdentificationNumberConstraintValidator implements ConstraintValida
 	public boolean isValid(String value, ConstraintValidatorContext context) {
 		boolean validationResult = false;
 		int validLength = idPrefix.equals(IdentificationType.EAN) ? 16 : 17;
-		boolean validStarts = value.startsWith(String.format("%s978",idPrefix.toString())) || value.startsWith(String.format("%s979",idPrefix.toString()));
-		if(value != null)
+		System.out.println(value);
+		if(value.length() > 0)
 		{
+			boolean validStarts = value.startsWith(String.format("%s978",idPrefix.toString())) || value.startsWith(String.format("%s979",idPrefix.toString()));
+
 			if(!validStarts || (value.length() != validLength))
-				return validationResult;
+				return false;
 			value = value.replace(this.idPrefix.toString(),"");
 			validationResult = value.matches("\\d+");
 		}

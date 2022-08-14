@@ -2,8 +2,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Créer un livre</title>
-		<meta charset="utf-8">
+		<title>CrÃ©er un livre</title>
+		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/assets/css/book/style.css"/>
 	</head>
 	<body>
@@ -16,7 +16,7 @@
 			<form:input path="title" type="text"/>
 			<br/>
 			<form:errors path="title" cssClass="error"/>
-			<span>Sélectionner le genre : <br/></span>
+			<span>SÃ©lectionner le genre : <br/></span>
 			<form:radiobuttons path="genre" items="${book.genres}"/>
 			<form:errors path="genre" cssClass="error"/>
 			<br/>
@@ -24,16 +24,16 @@
 			<form:input type="text" path="pagesNumber"/>
 			<form:errors path="pagesNumber" cssClass="error"/>
 			<br/>
-			<form:label path="identificationNumber">Numéro d'identification du livre (ISBN) :</form:label>
+			<form:label path="identificationNumber">NumÃ©ro d'identification du livre (ISBN) :</form:label>
 			<form:input type="text" path="identificationNumber"/>
 			<form:errors path="identificationNumber" cssClass="error"/>
 			<br/>
-			<span>Ajouter des caractéristiques (si existant):</span>
+			<span>Ajouter des caractÃ©ristiques (si existant):</span>
 			<br/>
 			<form:checkboxes items="${book.availableSpecifications}" path="specifications"/>
 			<br/>
 			<br/>
-			<input type="submit" value="Créer"/>
+			<input type="submit" value="CrÃ©er"/>
 		</form:form>
 	</body>
 </html>
