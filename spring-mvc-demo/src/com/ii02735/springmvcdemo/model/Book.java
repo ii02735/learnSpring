@@ -1,15 +1,16 @@
 package com.ii02735.springmvcdemo.model;
 
-import java.util.Arrays;
-import java.util.Map;
+import com.ii02735.springmvcdemo.model.validator.CheckIdentificationNumber;
+import com.ii02735.springmvcdemo.model.validator.CheckPagesNumber;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.Arrays;
+import java.util.Map;
 
-import com.ii02735.springmvcdemo.model.validator.CheckIdentificationNumber;
-
+@CheckPagesNumber
 public class Book {
 
 	@NotNull(message = "L'identité de l''auteur est obligatoire")
@@ -32,6 +33,11 @@ public class Book {
 	private String identificationNumber;
 
 	private String[] specifications;
+
+	public Book()
+	{
+		this.specifications = new String[]{};
+	}
 
 	public String getAuthor() {
 		return author;
@@ -62,7 +68,7 @@ public class Book {
 	}
 
 	public String[] getSpecifications() {
-		return specifications;
+		return this.specifications;
 	}
 	
 	public void setPagesNumber(Integer pagesNumber) {
